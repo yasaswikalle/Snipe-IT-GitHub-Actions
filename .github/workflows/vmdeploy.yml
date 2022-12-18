@@ -1,0 +1,20 @@
+name: remote ssh command
+on: [push]
+jobs:
+
+  build:
+    name: Build
+    runs-on: ubuntu-latest
+    steps:
+    - name: executing remote ssh commands using password
+      uses: appleboy/ssh-action@v0.1.6
+      with:
+        host: 20.245.122.41
+        username: Rootadmin
+        password: Cloudguru@123
+        port: 8000
+        script: |
+                whoami
+                sudo su
+                cd /home/Rootadmin/Snipe-IT-GitHub-Actions
+                docker compose up -d
