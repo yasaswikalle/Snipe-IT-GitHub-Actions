@@ -17,4 +17,4 @@ jobs:
                 whoami
                 cd /srv/Snipe-IT-GitHub-Actions
                 sudo git pull origin devcontainer
-                sudo docker compose up -d
+                sudo docker compose up --build -d
