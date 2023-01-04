@@ -9,12 +9,12 @@ jobs:
     - name: executing remote ssh commands using password
       uses: appleboy/ssh-action@v0.1.6
       with:
-        host: 20.245.122.41
-        username: Rootadmin
-        password: Cloudguru@123
-        port: 8000
+        host: 20.127.72.62
+        username: sample
+        password: Password@123
+        port: 22
         script: |
                 whoami
                 sudo su
-                cd /home/Rootadmin/Snipe-IT-GitHub-Actions
+                cd /srv/Snipe-IT-GitHub-Actions
                 docker compose up -d
